@@ -17,6 +17,13 @@ class ProjectManager extends AbstractManager {
       ]
     );
   }
+
+  insert(project) {
+    return this.connection.query(
+      `insert into ${this.table} (Nom, Url, Screenshot, Description) values (?, ?, ?, ?)`,
+      [project.Nom, project.Url, project.Screenshot, project.Description]
+    );
+  }
 }
 
 module.exports = ProjectManager;

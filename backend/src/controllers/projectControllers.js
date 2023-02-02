@@ -50,8 +50,25 @@ const edit = (req, res) => {
     });
 };
 
+const add = (req, res) => {
+  const project = req.body;
+
+  // TODO validations (length, format...)
+
+  models.project
+    .insert(project)
+    .then(([result]) => {
+      res.location(`/project/${result.insertId}`).sendStatus(201);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.sendStatus(500);
+    });
+};
+
 module.exports = {
   browse,
   read,
   edit,
+  add,
 };

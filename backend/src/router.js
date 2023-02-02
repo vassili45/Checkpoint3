@@ -15,5 +15,6 @@ const projectControllers = require("./controllers/projectControllers");
 router.get("/project", projectControllers.browse);
 router.get("/project/:id", projectControllers.read);
 router.put("/project/:id", projectControllers.edit);
+router.post("/project", projectControllers.add);
 
 module.exports = router;
