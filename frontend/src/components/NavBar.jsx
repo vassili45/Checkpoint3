@@ -8,7 +8,7 @@ function NavBar() {
         <div className="flex">
           <Link to="/">HOME</Link>
           <Link to="/AllProject">Tout les project</Link>
-          <Link to="/Dashboard/Project">Dashboard</Link>
+          <Link to="/Dashboard/ProjectBack">Dashboard</Link>
           <Link to="/Login">Login</Link>
         </div>
       </ul>
