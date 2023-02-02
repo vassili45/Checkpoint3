@@ -5,7 +5,7 @@ function NavBar() {
   return (
     <nav>
       <ul>
-        <div className="flex justify-end gap-4 items-center text-2xl bg-black">
+        <div className="flex">
           <Link to="/">HOME</Link>
           <Link to="/AllProject">Tout les project</Link>
           <Link to="/Dashboard/Project">Dashboard</Link>
