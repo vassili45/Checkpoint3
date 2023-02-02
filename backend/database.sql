@@ -15,3 +15,4 @@ CREATE TABLE project (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 INSERT INTO project (id, Nom, Url, Screenshot, Description) VALUES (1, 'Origins Digitals', 'https://origins.remote-fr-3.wilders.dev/', '/uploads/Origins_Digitals.png', 'Ce project ai réaliser en 3 mois');
+INSERT INTO project (id, Nom, Url, Screenshot, Description) VALUES (2, 'Origins Digitals', 'https://github.com/WildCodeSchool/2022-09-JS-RMT-JSCREW-projet2-team1', '/uploads/Poke_mall.png', 'Ce project ai réaliser en 1 mois');
