@@ -16,5 +16,6 @@ router.get("/project", projectControllers.browse);
 router.get("/project/:id", projectControllers.read);
 router.put("/project/:id", projectControllers.edit);
 router.post("/project", projectControllers.add);
+router.delete("/project/:id", projectControllers.destroy);
 
 module.exports = router;
