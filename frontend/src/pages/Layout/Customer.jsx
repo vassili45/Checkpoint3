@@ -1,7 +1,17 @@
 import React from "react";
+import { Outlet } from "react-router-dom";
 
-function Customer() {
-  return <div>Customer</div>;
+import NavBar from "@components/NavBar";
+import Footer from "@pages/Customers/Footer";
+
+function CustmrSite() {
+  return (
+    <div>
+      <NavBar />
+      <Outlet />
+      <Footer />
+    </div>
+  );
 }
 
-export default Customer;
+export default CustmrSite;
