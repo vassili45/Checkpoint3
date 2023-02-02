@@ -1,7 +1,15 @@
 import React from "react";
+import { Outlet } from "react-router-dom";
 
-function Dashboard() {
-  return <div>Dashboard</div>;
+import NavDash from "@components/NavDash";
+
+function CustmrSite() {
+  return (
+    <div>
+      <NavDash />
+      <Outlet />
+    </div>
+  );
 }
 
-export default Dashboard;
+export default CustmrSite;

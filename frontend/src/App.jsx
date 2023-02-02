@@ -8,6 +8,10 @@ import Project from "@pages/Customers/Project";
 import Login from "@pages/Customers/Login";
 import Contact from "@pages/Customers/Contact";
 
+import Dashboard from "@pages/Layout/Dashboard";
+import ProjectBack from "@pages/Back-office/ProjectBack";
+import Slider from "@pages/Back-office/Slider";
+
 import "./App.css";
 
 export default function App() {
@@ -21,6 +25,10 @@ export default function App() {
             <Route path="Project/:id" element={<Project />} />
             <Route path="Login" element={<Login />} />
             <Route path="Contact" element={<Contact />} />
+          </Route>
+          <Route path="/Dashboard" element={<Dashboard />}>
+            <Route path="ProjectBack" element={<ProjectBack />} />
+            <Route path="Slider" element={<Slider />} />
           </Route>
         </Routes>
       </div>
