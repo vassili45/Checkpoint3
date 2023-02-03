@@ -6,13 +6,24 @@ import apiConnexion from "../../services/apiConnexion";
 function Slider() {
   const [projects, setprojects] = useState([]);
 
-  useEffect(() => {
+  const getAllProject = () => {
     apiConnexion
       .get(`/project`)
-      .then((res) => {
-        setprojects(res.data);
+      .then((project) => setprojects(project.data))
+      .catch((error) => console.error(error));
+  };
+
+  const handleDeleteCard = (id) => {
+    apiConnexion
+      .delete(`/project/${id}`)
+      .then(() => {
+        getAllProject(true);
       })
-      .catch((err) => console.error(err));
+      .catch((error) => console.error(error));
+  };
+
+  useEffect(() => {
+    getAllProject(false);
   }, []);
 
   return (
@@ -23,8 +34,12 @@ function Slider() {
         </h1>
       </div>
       <div className="flex flex-wrap justify-center gap-10 bg-gray-200 h-screen">
-        {projects.map((project) => (
-          <ProjectCard project={project} />
+        {projects.map((data) => (
+          <ProjectCard
+            data={data}
+            key={data.id}
+            handleDeleteCard={handleDeleteCard}
+          />
         ))}
       </div>
     </div>
